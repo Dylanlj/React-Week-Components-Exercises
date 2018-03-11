@@ -1,27 +1,9 @@
 /* eslint-disable */
 var taskSvc = (function(){
-  var letters = 'abcdefghijklmnopqrstuvwxyz';
-  var alphabet = `0123456789${letters}${letters.toUpperCase()}`;
-
-  function rando(){
-    var output = '';
-    for (var i = 0; i < 6; i += 1) {
-      output += alphabet[Math.floor(Math.random() * alphabet.length)];
-    }
-    return output;
-  };
-
   var tasks = [
     { taskName: 'Walk Dog', finished: true, id: rando() },
     { taskName: 'Buy Bread', finished: false, id: rando() },
   ];
-
-  function delay(t){
-    t = t || 2000;
-    return new Promise(function(res){
-      setTimeout(res, t);
-    });
-  } 
 
   return {
     // () => Promise<Tasks[]>
