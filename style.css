@@ -5,7 +5,7 @@ body {
   display:flex;
   justify-content: center;
 }
-h1 small {
+small {
   font-size: .8em;
   color: #666;
   font-style: italic;
@@ -33,4 +33,22 @@ form{
 form > input[type='text']{
   flex-grow: 1;
   margin-right:.5em;
+}
+
+.valid small {
+  color: forestgreen;
+  font-weight: bold;
+}
+
+.valid input {
+  border: 1px solid forestgreen;
+}
+
+.error small {
+  color: #FF4136;
+  font-weight: bold;
+}
+
+.error input {
+  border: 1px solid #FF4136;
 }

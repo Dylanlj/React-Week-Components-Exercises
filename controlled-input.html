@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@latest/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link href="./style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <label>Postal Code <small>Required</small></label><br/>
+        <input type='text'/>
+      </div>
+      <div class="valid">
+        <label>Postal Code <small>Valid</small></label><br/>
+        <input type='text'/>
+      </div>
+      <div class="error">
+        <label>Postal Code <small>Error</small></label><br/>
+        <input type='text'/>
+      </div>
+    </div>
+    <script type="text/babel">
+
+    const root = document.getElementById('root');
+    const postalCodeRegularExpression = /[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ]\s?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]/gi
+    const isValidPostalCode = (entry) => postalCodeRegularExpression.test(entry);
+    
+    // TYPE ANSWER HERE.
+    </script>
+  </body>
+</html>
